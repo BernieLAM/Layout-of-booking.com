@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/*header - icons*/
+header {
+  background-color: #013580;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: minmax(200px, 5fr) 1fr 1fr;
+  padding-top: 23px;
+  align-items: center;
+}
+.icon-grid .logo {
+  width: 150px;
+  padding-left: 17px;
+}
+.icon-grid .user {
+  width: 30px;
+}
+.icon-grid .menu {
+  margin-left: 10px;
+  width: 20px;
+}
+
+/*header - menu bar*/
+.menu-bar {
+  background-color: red;
+  height: 50px;
+}
+.menu-bar li {
+  list-style: none;
+  display: inline-block;
+  overflow-x: scroll;
+}
+.menu-bar li img {
+  width: 20px;
+  margin-right: 5px;
+}
+.menu-bar li a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+/*main - search form*/
+main {
+  background-color: #f5f5f5;
+}
+
+.search {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.search h1 {
+  margin-top: 0;
+  padding-top: 30px;
+  font-size: 27px;
+}
+.search p {
+  margin-top: -13px;
+}/*# sourceMappingURL=styles.css.map */
