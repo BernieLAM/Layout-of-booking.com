@@ -12,34 +12,58 @@ header {
 .icon-grid {
   display: grid;
   grid-template-columns: minmax(200px, 5fr) 1fr 1fr;
-  padding-top: 23px;
+  padding-top: 10px;
   align-items: center;
+  /*hover*/
 }
 .icon-grid .logo {
   width: 150px;
-  padding-left: 17px;
+  padding-left: 10px;
 }
 .icon-grid .user {
   width: 30px;
 }
 .icon-grid .menu {
-  margin-left: 10px;
   width: 20px;
+  display: flex;
+  justify-self: center;
+}
+.icon-grid a:not(.logo) {
+  padding: 10px 10px;
+  display: flex;
+  justify-self: center;
+}
+.icon-grid .menu-link:hover {
+  background-color: #1e498d;
+}
+.icon-grid .user-link:hover {
+  background-color: #1e498d;
 }
 
+/*overlay - side menu*/
 /*header - menu bar*/
 .menu-bar {
-  background-color: red;
-  height: 50px;
+  background-color: #013580;
+  overflow-x: scroll;
+}
+.menu-bar ul {
+  width: 865px;
+  /*hover*/
+}
+.menu-bar ul a:not(.stays) {
+  border-radius: 30px;
+  padding: 12px 15px;
+}
+.menu-bar ul a:hover {
+  background-color: #1e498d;
 }
 .menu-bar li {
   list-style: none;
   display: inline-block;
-  overflow-x: scroll;
 }
 .menu-bar li img {
   width: 20px;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 .menu-bar li a {
   text-decoration: none;
@@ -47,8 +71,14 @@ header {
   display: flex;
   align-items: center;
 }
+.menu-bar li .stays {
+  background-color: #1e498d;
+  border: solid 1px #f5f5f5;
+  border-radius: 30px;
+  padding: 12px 15px;
+}
 
-/*main - search form*/
+/*main - search*/
 main {
   background-color: #f5f5f5;
 }
@@ -64,4 +94,341 @@ main {
 }
 .search p {
   margin-top: -13px;
+}
+
+/*main - form*/
+.form-grid {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  background-color: #febb00;
+  border: solid 8px #febb00;
+  border-radius: 3px;
+  align-items: center;
+  /*main - grid*/
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 58px);
+  row-gap: 8px;
+  grid-template-areas: "location location location location location location" "in in in out out out" "adult adult children children rooms rooms" "work work work work work work" "submit submit submit submit submit submit";
+}
+.form-grid .location {
+  background-color: #ffffff;
+  grid-area: location;
+  display: flex;
+  align-items: center;
+}
+.form-grid .location .search-icon {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 20px;
+}
+.form-grid .location input {
+  border: none;
+  width: 100%;
+  height: 58px;
+}
+.form-grid .in {
+  background-color: #ffffff;
+  grid-area: in;
+  display: flex;
+  align-items: center;
+  display: grid;
+  height: 58px;
+  margin-right: 5px;
+  /*internal grid*/
+  grid-template-rows: repeat(2, auto);
+}
+.form-grid .in label {
+  margin-left: 5px;
+}
+.form-grid .in button {
+  border-style: none;
+  background-color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-items: flex-start;
+}
+.form-grid .out {
+  background-color: #ffffff;
+  grid-area: out;
+  display: flex;
+  align-items: center;
+  display: grid;
+  height: 58px;
+  /*internal grid*/
+  grid-template-rows: repeat(2, auto);
+}
+.form-grid .out label {
+  margin-left: 5px;
+}
+.form-grid .out button {
+  border-style: none;
+  background-color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-items: flex-start;
+}
+.form-grid .adults {
+  background-color: #ffffff;
+  grid-area: adult;
+  display: flex;
+  align-items: center;
+  display: grid;
+  height: 58px;
+  /*internal grid*/
+  grid-template-rows: repeat(2, auto);
+}
+.form-grid .adults label {
+  margin-left: 5px;
+}
+.form-grid .adults button {
+  border-style: none;
+  background-color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-items: flex-start;
+  margin-left: 3px;
+}
+.form-grid .children {
+  background-color: #ffffff;
+  grid-area: children;
+  display: flex;
+  align-items: center;
+  display: grid;
+  height: 58px;
+  border-left: solid 1px rgb(204, 204, 204);
+  /*internal grid*/
+  grid-template-rows: repeat(2, auto);
+}
+.form-grid .children label {
+  margin-left: 5px;
+}
+.form-grid .children button {
+  border-style: none;
+  background-color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-items: flex-start;
+  margin-left: 3px;
+}
+.form-grid .rooms {
+  background-color: #ffffff;
+  grid-area: rooms;
+  display: flex;
+  align-items: center;
+  display: grid;
+  height: 58px;
+  border-left: solid 1px rgb(204, 204, 204);
+  /*internal grid*/
+  grid-template-rows: repeat(2, auto);
+}
+.form-grid .rooms label {
+  margin-left: 5px;
+}
+.form-grid .rooms button {
+  border-style: none;
+  background-color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-items: flex-start;
+  margin-left: 3px;
+}
+.form-grid .work {
+  background-color: #ffffff;
+  height: 58px;
+  grid-area: work;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.form-grid .work input {
+  border: none;
+  padding-top: 5px;
+  scale: 1.7;
+  margin-left: 15px;
+}
+.form-grid .work label {
+  margin: 12px;
+}
+.form-grid .submit {
+  grid-area: submit;
+  display: flex;
+  align-items: center;
+}
+.form-grid .submit button {
+  border-style: none;
+  background-color: #0071c2;
+  color: #ffffff;
+  width: 100%;
+  height: 58px;
+  font-size: 22px;
+  font-weight: 500;
+  text-shadow: 0px 1px 0px black;
+}
+.form-grid input::-moz-placeholder {
+  font-size: 17px;
+  font-weight: bold;
+  opacity: 1;
+  color: black;
+}
+.form-grid input:-ms-input-placeholder {
+  font-size: 17px;
+  font-weight: bold;
+  opacity: 1;
+  color: black;
+}
+.form-grid input::placeholder,
+.form-grid input[type=text],
+.form-grid input[type=number] {
+  font-size: 17px;
+  font-weight: bold;
+  opacity: 1;
+  color: black;
+}
+
+/*main - covid*/
+.covid {
+  background-color: #ffffff;
+  border: solid 1px rgb(204, 204, 204);
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-style: none;
+  /*main - covid- grid*/
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+}
+.covid .info-icon {
+  width: 20px;
+  margin-left: 15px;
+}
+.covid .arrow-icon {
+  width: 10px;
+  display: flex;
+  justify-self: end;
+  margin-right: 15px;
+}
+.covid p {
+  font-size: 15px;
+  color: #262626;
+}
+
+/*main - promo*/
+.promo {
+  background-color: #ffffff;
+  border-top: solid 1px rgb(204, 204, 204);
+  border-bottom: solid 1px rgb(204, 204, 204);
+  margin-bottom: 20px;
+  /*main - promo - grid*/
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.promo .deals,
+.promo .plane,
+.promo .extended {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.promo h2 {
+  font-size: 17px;
+  color: #262626;
+  margin-bottom: -5px;
+}
+.promo p {
+  font-size: 14px;
+  color: #262626;
+  margin-bottom: 25px;
+  line-height: 20px;
+}
+.promo img {
+  width: 70px;
+  height: 70px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.promo a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #0071c2;
+  border: solid 1px #0071c2;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+/*main - thoughts - grid*/
+.thoughts {
+  background-color: #ffffff;
+  border-top: solid 1px rgb(204, 204, 204);
+  border-bottom: solid 1px rgb(204, 204, 204);
+  /*main - promo - grid*/
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.thoughts .share {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.thoughts img {
+  width: 120px;
+  margin-left: 25px;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+.thoughts h2 {
+  font-size: 17px;
+  color: #262626;
+  margin-bottom: -5px;
+}
+.thoughts p {
+  font-size: 14px;
+  color: #262626;
+  margin-bottom: 25px;
+  line-height: 20px;
+}
+.thoughts a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #0071c2;
+  border: solid 1px #0071c2;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.overlay {
+  background-color: red;
+  padding-left: 20px;
+  cursor: default;
+  display: none;
+}
+.overlay h3 {
+  font-size: 15px;
+}
+.overlay div {
+  color: black;
+  display: block;
+  padding: 16px 24px;
+  font-size: 15px;
+}
+.overlay .other-page {
+  cursor: pointer;
+}
+
+.menu-link:focus-within .overlay {
+  display: initial;
+  width: 100%;
+  height: 100%;
+  /*location of the overlay*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
 }/*# sourceMappingURL=styles.css.map */

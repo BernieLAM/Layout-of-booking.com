@@ -23,38 +23,86 @@
           ><a href="#"><img class="logo" src="/assets/logo.png" alt="logo" /></a
         ></span>
 
-        <a href="#"
+        <a href="#" class="user-link"
           ><img class="user" src="/assets/user_icon.svg" alt="user"
         /></a>
-        <a href="#"
-          ><img class="menu" src="/assets/menu_icon.svg" alt="menu"
-        /></a>
+        <a href="#" class="menu-link"
+          ><img class="menu" src="/assets/menu_icon.svg" alt="menu" />
+          <div class="overlay">
+            <div>
+              <img src="/assets/xmark-solid.svg" alt="close" width="20px" />
+            </div>
+
+            <div><h2>More</h2></div>
+            <div class="other-page">
+              <div>Sterling</div>
+              <div>English (UK)</div>
+              <div>Genius loyalty programme</div>
+              <div>List your property</div>
+            </div>
+
+            <div><h3>Help and support</h3></div>
+            <div class="other-page">
+              <div>Customer Service help</div>
+              <div>Dispute resolution</div>
+            </div>
+
+            <div><h3>Inspiration</h3></div>
+            <div class="other-page">
+              <div>Seasonal and holiday deals</div>
+              <div>Travel articles</div>
+              <div>Travel communities</div>
+            </div>
+
+            <div><h3>Settings and legal</h3></div>
+            <div class="other-page">
+              <div>About Booking.com</div>
+              <div>Careers</div>
+              <div>Become an affiliate</div>
+              <div>Press centre</div>
+              <div>Privacy & cookies</div>
+              <div>Terms and conditions</div>
+              <div>Legal</div>
+            </div>
+          </div>
+        </a>
       </div>
 
       <div>
         <nav class="menu-bar">
           <ul>
             <li>
-              <a href="#"><img src="/assets/bed-solid.svg" /> Stays</a>
-            </li>
-            <li>
-              <a href="#"><img src="/assets/plane-solid.svg" /> Flights</a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="/assets/earth-asia-solid.svg" /> Flight + Hotel</a
+              <a href="#" class="stays"
+                ><img src="/assets/bed-solid.svg" alt="stays" /> Stays</a
               >
             </li>
             <li>
-              <a href="#"><img src="/assets/car-solid.svg" /> Car rentals</a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="/assets/dharmachakra-solid.svg" /> Attractions</a
+              <a href="#" class="flghts"
+                ><img src="/assets/plane-solid.svg" alt="flights" /> Flights</a
               >
             </li>
             <li>
-              <a href="#"><img src="/assets/taxi-solid.svg" /> Airport taxis</a>
+              <a href="#"
+                ><img src="/assets/earth-asia-solid.svg" alt="flight+hotel" />
+                Flight + Hotel</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="/assets/car-solid.svg" alt="car" /> Car rentals</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="/assets/dharmachakra-solid.svg" alt="attractions" />
+                Attractions</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="/assets/taxi-solid.svg" alt="taxis" /> Airport
+                taxis</a
+              >
             </li>
           </ul>
         </nav>
@@ -68,31 +116,99 @@
           <p>Destinations, properties, even an address</p>
         </div>
 
-        <div>Forms</div>
+        <div>
+          <form class="form-grid">
+            <div class="location">
+              <img class="search-icon" src="/assets/search.svg" alt="seacrh" />
+              <input
+                type="text"
+                id="location"
+                name="location"
+                placeholder="Around current location"
+                required
+              />
+            </div>
+            <div class="in">
+              <label>Check-in-date</label>
+              <button type="button">Tue 1 Feb 2023</button>
+            </div>
+
+            <div class="out">
+              <label>Check-in-date</label>
+              <button type="button">Wed 2 Feb 2023</button>
+            </div>
+
+            <div class="adults">
+              <label>Adults</label>
+              <button type="button">2</button>
+            </div>
+
+            <div class="children">
+              <label>Children</label>
+              <button type="button">0</button>
+            </div>
+
+            <div class="rooms">
+              <label>Rooms</label>
+              <button type="button">1</button>
+            </div>
+            <div class="work">
+              <input type="checkbox" name="work" value="work" id="work" />
+              <label>I'm travelling for work</label>
+            </div>
+            <div class="submit"><button type="submit">Search</button></div>
+          </form>
+        </div>
       </div>
 
       <div>
-        <h2>New year, new adventures</h2>
-        <p>Save 15% or more on stays before 31 March 2023</p>
-        <a href="#">Find Early 2023 Deals</a>
+        <a href="#" class="covid"
+          ><img
+            class="info-icon"
+            src="/assets/circle-info-solid.svg"
+            alt="info" />
+          <p>Get the latest COVID-19 travel advice</p>
+          <img
+            class="arrow-icon"
+            src="/assets/chevron-right-solid.svg"
+            alt="arrow"
+        /></a>
       </div>
 
-      <div>
-        <h2>Fly away to your dream holiday</h2>
-        <p>Get inspired, compare and book flights with more flexibility</p>
-        <a href="#">Search for flights</a>
+      <div class="promo">
+        <div><img src="/assets/hiking.jpeg" alt="hiking" /></div>
+        <div class="deals">
+          <h2>New year, new adventures</h2>
+          <p>Save 15% or more on stays before 31 March 2023</p>
+          <a href="#">Find Early 2023 Deals</a>
+        </div>
       </div>
 
-      <div>
-        <h2>Get away for a while</h2>
-        <p>Live your life anywhere with extended stays on Booking.com</p>
-        <a href="#">Find an extended stay</a>
+      <div class="promo">
+        <div><img src="/assets/plane.png" alt="plane" /></div>
+        <div class="plane">
+          <h2>Fly away to your dream holiday</h2>
+          <p>Get inspired, compare and book flights with more flexibility</p>
+          <a href="#">Search for flights</a>
+        </div>
       </div>
 
-      <div>
-        <h2>How are we doing?</h2>
-        <p>We've got one question about your experience</p>
-        <a href="#">Share your thoughts</a>
+      <div class="promo">
+        <div><img src="/assets/relax.jpeg" alt="relax" /></div>
+        <div class="extended">
+          <h2>Get away for a while</h2>
+          <p>Live your life anywhere with extended stays on Booking.com</p>
+          <a href="#">Find an extended stay</a>
+        </div>
+      </div>
+
+      <div class="thoughts">
+        <div><img src="/assets/thoughts.png" alt="thoughts" /></div>
+        <div class="share">
+          <h2>How are we doing?</h2>
+          <p>We've got one question about your experience</p>
+          <a href="#">Share your thoughts</a>
+        </div>
       </div>
     </main>
   </body>

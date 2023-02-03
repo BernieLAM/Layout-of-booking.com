@@ -13,35 +13,64 @@ header {
 .icon-grid {
   display: grid;
   grid-template-columns: minmax(200px, 5fr) 1fr 1fr;
-  padding-top: 23px;
+  padding-top: 10px;
   align-items: center;
+
   .logo {
     width: 150px;
-    padding-left: 17px;
+    padding-left: 10px;
   }
   .user {
     width: 30px;
   }
   .menu {
-    margin-left: 10px;
     width: 20px;
+    display: flex;
+    justify-self: center;
+  }
+  /*hover*/
+  a:not(.logo) {
+    padding: 10px 10px;
+    display: flex;
+    justify-self: center;
+  }
+
+  .menu-link:hover {
+    background-color: #1e498d;
+  }
+
+  .user-link:hover {
+    background-color: #1e498d;
   }
 }
+
+/*overlay - side menu*/
 
 /*header - menu bar*/
 
 .menu-bar {
-  background-color: red;
-  height: 50px;
+  background-color: #013580;
+  overflow-x: scroll;
+  ul {
+    width: 865px;
+
+    /*hover*/
+    a:not(.stays) {
+      border-radius: 30px;
+      padding: 12px 15px;
+    }
+
+    a:hover {
+      background-color: #1e498d;
+    }
+  }
 
   li {
     list-style: none;
     display: inline-block;
-    overflow-x: scroll;
-
     img {
       width: 20px;
-      margin-right: 5px;
+      margin-right: 10px;
     }
     a {
       text-decoration: none;
@@ -49,14 +78,22 @@ header {
       display: flex;
       align-items: center;
     }
+
+    .stays {
+      background-color: #1e498d;
+      border: solid 1px #f5f5f5;
+      border-radius: 30px;
+      padding: 12px 15px;
+    }
   }
 }
 
-/*main - search form*/
+/*main - search*/
 
 main {
   background-color: #f5f5f5;
 }
+
 .search {
   margin-left: 20px;
   margin-right: 20px;
@@ -68,4 +105,383 @@ main {
   p {
     margin-top: -13px;
   }
+}
+
+/*main - form*/
+
+.form-grid {
+  .location {
+    background-color: #ffffff;
+    grid-area: location;
+    display: flex;
+    align-items: center;
+    .search-icon {
+      margin-left: 10px;
+      margin-right: 10px;
+      width: 20px;
+    }
+    input {
+      border: none;
+      width: 100%;
+      height: 58px;
+    }
+  }
+
+  .in {
+    background-color: #ffffff;
+    grid-area: in;
+    display: flex;
+    align-items: center;
+    display: grid;
+    height: 58px;
+    margin-right: 5px;
+
+    /*internal grid*/
+    grid-template-rows: repeat(2, auto);
+
+    label {
+      margin-left: 5px;
+    }
+
+    button {
+      border-style: none;
+      background-color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      justify-items: flex-start;
+    }
+  }
+
+  .out {
+    background-color: #ffffff;
+    grid-area: out;
+    display: flex;
+    align-items: center;
+    display: grid;
+    height: 58px;
+
+    /*internal grid*/
+    grid-template-rows: repeat(2, auto);
+
+    label {
+      margin-left: 5px;
+    }
+
+    button {
+      border-style: none;
+      background-color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      justify-items: flex-start;
+    }
+  }
+
+  .adults {
+    background-color: #ffffff;
+
+    grid-area: adult;
+    display: flex;
+    align-items: center;
+    display: grid;
+    height: 58px;
+
+    /*internal grid*/
+    grid-template-rows: repeat(2, auto);
+
+    label {
+      margin-left: 5px;
+    }
+
+    button {
+      border-style: none;
+      background-color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      justify-items: flex-start;
+      margin-left: 3px;
+    }
+  }
+
+  .children {
+    background-color: #ffffff;
+
+    grid-area: children;
+    display: flex;
+    align-items: center;
+    display: grid;
+    height: 58px;
+    border-left: solid 1px rgb(204, 204, 204);
+
+    /*internal grid*/
+    grid-template-rows: repeat(2, auto);
+
+    label {
+      margin-left: 5px;
+    }
+
+    button {
+      border-style: none;
+      background-color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      justify-items: flex-start;
+      margin-left: 3px;
+    }
+  }
+
+  .rooms {
+    background-color: #ffffff;
+
+    grid-area: rooms;
+    display: flex;
+    align-items: center;
+    display: grid;
+    height: 58px;
+    border-left: solid 1px rgb(204, 204, 204);
+
+    /*internal grid*/
+    grid-template-rows: repeat(2, auto);
+
+    label {
+      margin-left: 5px;
+    }
+
+    button {
+      border-style: none;
+      background-color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      justify-items: flex-start;
+      margin-left: 3px;
+    }
+  }
+
+  .work {
+    background-color: #ffffff;
+    height: 58px;
+    grid-area: work;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    input {
+      border: none;
+      padding-top: 5px;
+      scale: 1.7;
+      margin-left: 15px;
+    }
+    label {
+      margin: 12px;
+    }
+  }
+
+  .submit {
+    grid-area: submit;
+    display: flex;
+    align-items: center;
+    button {
+      border-style: none;
+      background-color: #0071c2;
+      color: #ffffff;
+      width: 100%;
+      height: 58px;
+      font-size: 22px;
+      font-weight: 500;
+      text-shadow: 0px 1px 0px black;
+    }
+  }
+
+  margin-top: 35px;
+  margin-bottom: 20px;
+  background-color: #febb00;
+  border: solid 8px #febb00;
+  border-radius: 3px;
+  align-items: center;
+
+  input::placeholder,
+  input[type="text"],
+  input[type="number"] {
+    font-size: 17px;
+    font-weight: bold;
+    opacity: 1;
+    color: black;
+  }
+
+  /*main - grid*/
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 58px);
+  row-gap: 8px;
+  grid-template-areas:
+    "location location location location location location"
+    "in in in out out out"
+    "adult adult children children rooms rooms"
+    "work work work work work work"
+    "submit submit submit submit submit submit";
+}
+
+/*main - covid*/
+
+.covid {
+  background-color: #ffffff;
+  border: solid 1px rgb(204, 204, 204);
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-style: none;
+  .info-icon {
+    width: 20px;
+    margin-left: 15px;
+  }
+  .arrow-icon {
+    width: 10px;
+    display: flex;
+    justify-self: end;
+    margin-right: 15px;
+  }
+  p {
+    font-size: 15px;
+    color: #262626;
+  }
+
+  /*main - covid- grid*/
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+}
+
+/*main - promo*/
+
+.promo {
+  background-color: #ffffff;
+  border-top: solid 1px rgb(204, 204, 204);
+  border-bottom: solid 1px rgb(204, 204, 204);
+  margin-bottom: 20px;
+
+  .deals,
+  .plane,
+  .extended {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  h2 {
+    font-size: 17px;
+    color: #262626;
+    margin-bottom: -5px;
+  }
+
+  p {
+    font-size: 14px;
+    color: #262626;
+    margin-bottom: 25px;
+    line-height: 20px;
+  }
+  img {
+    width: 70px;
+    height: 70px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #0071c2;
+    border: solid 1px #0071c2;
+    border-radius: 3px;
+    padding: 10px;
+  }
+
+  /*main - promo - grid*/
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+/*main - thoughts - grid*/
+.thoughts {
+  background-color: #ffffff;
+  border-top: solid 1px rgb(204, 204, 204);
+  border-bottom: solid 1px rgb(204, 204, 204);
+
+  .share {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  img {
+    width: 120px;
+    margin-left: 25px;
+    margin-top: 15px;
+    margin-right: 15px;
+  }
+
+  h2 {
+    font-size: 17px;
+    color: #262626;
+    margin-bottom: -5px;
+  }
+
+  p {
+    font-size: 14px;
+    color: #262626;
+    margin-bottom: 25px;
+    line-height: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #0071c2;
+    border: solid 1px #0071c2;
+    border-radius: 3px;
+    padding: 10px;
+  }
+
+  /*main - promo - grid*/
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.overlay {
+  background-color: red;
+  padding-left: 20px;
+  cursor: default;
+
+  display: none;
+
+  h3 {
+    font-size: 15px;
+  }
+
+  div {
+    color: black;
+    display: block;
+    padding: 16px 24px;
+    font-size: 15px;
+  }
+
+  .other-page {
+    cursor: pointer;
+  }
+}
+
+.menu-link:focus-within .overlay {
+  display: initial;
+  width: 100%;
+  height: 100%;
+
+  /*location of the overlay*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  z-index: 1;
 }
