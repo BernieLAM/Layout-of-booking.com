@@ -28,11 +28,8 @@
         /></a>
         <a href="#" class="menu-link"
           ><img class="menu" src="/assets/menu_icon.svg" alt="menu" />
-          <div class="overlay">
-            <div>
-              <img src="/assets/xmark-solid.svg" alt="close" width="20px" />
-            </div>
 
+          <div class="overlay">
             <div><h2>More</h2></div>
             <div class="other-page">
               <div>Sterling</div>
@@ -66,6 +63,9 @@
             </div>
           </div>
         </a>
+        <div class="close-icon">
+          <img src="/assets/xmark-solid.svg" alt="close" />
+        </div>
       </div>
 
       <div>
@@ -110,104 +110,122 @@
     </header>
 
     <main>
-      <div class="search">
+      <div class="desktop-bg">
+        <div class="search">
+          <div>
+            <h1>Search</h1>
+            <p>Destinations, properties, even an address</p>
+          </div>
+
+          <div>
+            <form class="form-grid">
+              <div class="location">
+                <img
+                  class="search-icon"
+                  src="/assets/search.svg"
+                  alt="seacrh"
+                />
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  placeholder="Around current location"
+                  required
+                />
+              </div>
+              <div class="in">
+                <label>Check-in-date</label>
+                <button type="button">Tue 1 Feb 2023</button>
+              </div>
+
+              <div class="out">
+                <label>Check-in-date</label>
+                <button type="button">Wed 2 Feb 2023</button>
+              </div>
+
+              <div class="adults">
+                <label>Adults</label>
+                <button type="button">2</button>
+              </div>
+
+              <div class="children">
+                <label>Children</label>
+                <button type="button">0</button>
+              </div>
+
+              <div class="rooms">
+                <label>Rooms</label>
+                <button type="button">1</button>
+              </div>
+              <div class="work">
+                <input type="checkbox" name="work" value="work" id="work" />
+                <label>I'm travelling for work</label>
+              </div>
+              <div class="submit"><button type="submit">Search</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="desktop-bg-margin">
+        <!-- only for desktop - hide in mobile version -->
+        <div class="work-for-desktop">
+          <input type="checkbox" name="work" value="work" id="work" />
+          <label>I'm travelling for work</label>
+        </div>
         <div>
-          <h1>Search</h1>
-          <p>Destinations, properties, even an address</p>
+          <a href="#" class="covid"
+            ><img
+              class="info-icon"
+              src="/assets/circle-info-solid.svg"
+              alt="info" />
+            <p>Get the latest COVID-19 travel advice</p>
+            <img
+              class="arrow-icon"
+              src="/assets/chevron-right-solid.svg"
+              alt="arrow"
+          /></a>
         </div>
 
-        <div>
-          <form class="form-grid">
-            <div class="location">
-              <img class="search-icon" src="/assets/search.svg" alt="seacrh" />
-              <input
-                type="text"
-                id="location"
-                name="location"
-                placeholder="Around current location"
-                required
-              />
-            </div>
-            <div class="in">
-              <label>Check-in-date</label>
-              <button type="button">Tue 1 Feb 2023</button>
-            </div>
-
-            <div class="out">
-              <label>Check-in-date</label>
-              <button type="button">Wed 2 Feb 2023</button>
-            </div>
-
-            <div class="adults">
-              <label>Adults</label>
-              <button type="button">2</button>
-            </div>
-
-            <div class="children">
-              <label>Children</label>
-              <button type="button">0</button>
-            </div>
-
-            <div class="rooms">
-              <label>Rooms</label>
-              <button type="button">1</button>
-            </div>
-            <div class="work">
-              <input type="checkbox" name="work" value="work" id="work" />
-              <label>I'm travelling for work</label>
-            </div>
-            <div class="submit"><button type="submit">Search</button></div>
-          </form>
+        <div class="promo-for-desktop">
+          <h2>Offers</h2>
+          <p>Promotions, deals and special offers for you</p>
         </div>
-      </div>
 
-      <div>
-        <a href="#" class="covid"
-          ><img
-            class="info-icon"
-            src="/assets/circle-info-solid.svg"
-            alt="info" />
-          <p>Get the latest COVID-19 travel advice</p>
-          <img
-            class="arrow-icon"
-            src="/assets/chevron-right-solid.svg"
-            alt="arrow"
-        /></a>
-      </div>
-
-      <div class="promo">
-        <div><img src="/assets/hiking.jpeg" alt="hiking" /></div>
-        <div class="deals">
-          <h2>New year, new adventures</h2>
-          <p>Save 15% or more on stays before 31 March 2023</p>
-          <a href="#">Find Early 2023 Deals</a>
+        <div class="promo promo-1">
+          <div><img src="/assets/hiking.jpeg" alt="hiking" /></div>
+          <div class="deals">
+            <h2>New year, new adventures</h2>
+            <p>Save 15% or more on stays before 31 March 2023</p>
+            <a href="#">Find Early 2023 Deals</a>
+          </div>
         </div>
-      </div>
 
-      <div class="promo">
-        <div><img src="/assets/plane.png" alt="plane" /></div>
-        <div class="plane">
-          <h2>Fly away to your dream holiday</h2>
-          <p>Get inspired, compare and book flights with more flexibility</p>
-          <a href="#">Search for flights</a>
+        <div class="promo promo-2">
+          <div><img src="/assets/plane.png" alt="plane" /></div>
+          <div class="plane">
+            <h2>Fly away to your dream holiday</h2>
+            <p>Get inspired, compare and book flights with more flexibility</p>
+            <a href="#">Search for flights</a>
+          </div>
         </div>
-      </div>
 
-      <div class="promo">
-        <div><img src="/assets/relax.jpeg" alt="relax" /></div>
-        <div class="extended">
-          <h2>Get away for a while</h2>
-          <p>Live your life anywhere with extended stays on Booking.com</p>
-          <a href="#">Find an extended stay</a>
+        <div class="promo promo-3">
+          <div><img src="/assets/relax.jpeg" alt="relax" /></div>
+          <div class="extended">
+            <h2>Get away for a while</h2>
+            <p>Live your life anywhere with extended stays on Booking.com</p>
+            <a href="#">Find an extended stay</a>
+          </div>
         </div>
-      </div>
 
-      <div class="thoughts">
-        <div><img src="/assets/thoughts.png" alt="thoughts" /></div>
-        <div class="share">
-          <h2>How are we doing?</h2>
-          <p>We've got one question about your experience</p>
-          <a href="#">Share your thoughts</a>
+        <div class="thoughts">
+          <div><img src="/assets/thoughts.png" alt="thoughts" /></div>
+          <div class="share">
+            <h2>How are we doing?</h2>
+            <p>We've got one question about your experience</p>
+            <a href="#">Share your thoughts</a>
+          </div>
         </div>
       </div>
     </main>

@@ -12,7 +12,7 @@ header {
 
 .icon-grid {
   display: grid;
-  grid-template-columns: minmax(200px, 5fr) 1fr 1fr;
+  grid-template-columns: minmax(200px, 5fr) 70px 70px;
   padding-top: 10px;
   align-items: center;
 
@@ -43,8 +43,6 @@ header {
     background-color: #1e498d;
   }
 }
-
-/*overlay - side menu*/
 
 /*header - menu bar*/
 
@@ -325,6 +323,11 @@ main {
     "submit submit submit submit submit submit";
 }
 
+/*only for desktop - hide in mobile version*/
+.work-for-desktop {
+  display: none;
+}
+
 /*main - covid*/
 
 .covid {
@@ -355,6 +358,11 @@ main {
   /*main - covid- grid*/
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
+}
+
+/*only for desktop - hide in mobile version*/
+.promo-for-desktop {
+  display: none;
 }
 
 /*main - promo*/
@@ -450,9 +458,17 @@ main {
 }
 
 .overlay {
-  background-color: red;
+  background-color: #ffffff;
   padding-left: 20px;
+  padding-top: 50px;
   cursor: default;
+  width: 100vw;
+  height: 100vh;
+  /*location of overlay*/
+  position: fixed;
+  top: 0px;
+  left: 0;
+  overflow: scroll;
 
   display: none;
 
@@ -463,7 +479,7 @@ main {
   div {
     color: black;
     display: block;
-    padding: 16px 24px;
+    padding: 15px 24px;
     font-size: 15px;
   }
 
@@ -472,16 +488,312 @@ main {
   }
 }
 
+/*action of overlay*/
 .menu-link:focus-within .overlay {
   display: initial;
-  width: 100%;
-  height: 100%;
-
-  /*location of the overlay*/
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-
   z-index: 1;
+}
+
+.close-icon {
+  height: 55px;
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+
+  img {
+    width: 15px;
+    cursor: pointer;
+    margin-top: 19px;
+    margin-right: 21px;
+  }
+  display: flex;
+  justify-content: flex-end;
+
+  z-index: 2;
+}
+
+.menu-link:focus-within + .close-icon {
+  visibility: visible;
+}
+
+@media screen and (min-width: 550px) {
+  /*header*/
+  .icon-grid,
+  .menu-bar {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #013580;
+  }
+
+  .icon-grid {
+    a:not(.logo) {
+      padding: 10px 0px;
+    }
+
+    .logo {
+      padding-left: 0px;
+    }
+  }
+
+  .menu-bar {
+    ul {
+      padding: 0px 0px;
+    }
+  }
+
+  main {
+    background-color: #ffffff;
+  }
+  /*main*/
+
+  .desktop-bg {
+    background: linear-gradient(
+      to bottom,
+      #013580 0%,
+      #013580 88%,
+      #ffffff 88%,
+      #ffffff 100%
+    );
+  }
+
+  .search {
+    margin-left: 10%;
+    margin-right: 10%;
+    h1 {
+      color: #ffffff;
+      margin-top: 0;
+      padding-top: 70px;
+      font-size: 45px;
+    }
+    p {
+      color: #ffffff;
+      margin-top: -20px;
+      font-size: 23px;
+    }
+  }
+
+  .for-desktop-bg {
+    background-color: #ffffff;
+    margin-top: 10px;
+  }
+
+  .covid {
+    background-color: #ffffff;
+    border: solid 1px rgb(204, 204, 204);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-style: none;
+    .info-icon {
+      width: 20px;
+      margin-left: 15px;
+    }
+    .arrow-icon {
+      width: 10px;
+      display: flex;
+      justify-self: end;
+      margin-right: 15px;
+    }
+    p {
+      font-size: 15px;
+      color: #262626;
+    }
+  }
+
+  .form-grid {
+    box-shadow: 0px 2px 3px rgb(158, 158, 158);
+
+    .work {
+      display: none;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(1, 58px);
+    grid-template-areas: "location location location in out adult children rooms submit";
+
+    margin-top: 35px;
+    margin-bottom: 8px;
+    background-color: #febb00;
+    border: solid 5px #febb00;
+    border-radius: 3px;
+    align-items: center;
+
+    .location {
+      border-right: solid 5px #febb00;
+
+      input {
+        width: 100%;
+        height: 56px;
+      }
+    }
+
+    .in {
+      margin-right: 0px;
+      /*internal grid*/
+      grid-template-rows: repeat(1, auto);
+
+      label {
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+      }
+
+      button {
+        display: none;
+      }
+    }
+
+    .out {
+      border-right: solid 5px #febb00;
+      /*internal grid*/
+      grid-template-rows: repeat(1, auto);
+
+      label {
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+      }
+
+      button {
+        display: none;
+      }
+    }
+    .submit {
+      border-left: solid 5px #febb00;
+    }
+
+    .adults,
+    .children,
+    .rooms {
+      /*internal grid*/
+      grid-template-rows: repeat(1, auto);
+      grid-template-columns: repeat(2, auto);
+      border-left: none;
+
+      label {
+        display: flex;
+        justify-content: center;
+      }
+      button {
+        font-weight: normal;
+        font-size: 14px;
+      }
+    }
+
+    input::placeholder,
+    input[type="text"],
+    input[type="number"] {
+      font-size: 17px;
+      font-weight: normal;
+      opacity: 1;
+      color: black;
+    }
+  }
+
+  /*only for desktop - hide in mobile version*/
+  .work-for-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    input {
+      border: none;
+      padding-top: 5px;
+      scale: 1.7;
+      margin-left: 15px;
+    }
+    label {
+      margin: 12px;
+      font-size: 15px;
+    }
+  }
+
+  .desktop-bg-margin {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .promo-for-desktop {
+    display: initial;
+    p {
+      color: #858585;
+      margin-top: -10px;
+    }
+  }
+
+  .covid {
+    margin-top: 35px;
+    margin-left: 0px;
+    margin-right: 00px;
+    .info-icon {
+      background-color: #fef0e0;
+      margin: 15px;
+      padding: 10px;
+    }
+
+    /*main - covid- grid*/
+    display: grid;
+    grid-template-columns: 1fr 12fr 1fr;
+  }
+
+  .promo-2,
+  .promo-3 {
+    display: none;
+  }
+
+  .promo-1 {
+    /*main - promo - grid*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    .deals {
+      margin-top: 30px;
+      margin-left: 15px;
+      margin-bottom: 50px;
+    }
+
+    h2,
+    p {
+      color: #ffffff;
+    }
+
+    background-image: url(assets/men-hiking.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    img {
+      display: none;
+    }
+
+    a {
+      background-color: #0071c2;
+      color: #ffffff;
+    }
+  }
+
+  /*main - thoughts - grid*/
+  .thoughts {
+    margin-top: 50px;
+    border: solid 1px rgb(204, 204, 204);
+
+    p {
+      font-size: 17px;
+    }
+
+    a {
+      font-size: 16px;
+    }
+
+    /*main - promo - grid*/
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+
+    margin-bottom: 20px;
+  }
 }
